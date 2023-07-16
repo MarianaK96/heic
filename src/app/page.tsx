@@ -19,9 +19,6 @@ export default function Home() {
           })
         )
         .then((conversionResult) => {
-          const reader = new FileReader();
-          const read = reader.readAsDataURL(conversionResult);
-          console.log(' read : ', read);
           setImg(URL.createObjectURL(conversionResult));
         })
         .catch((e) => {
